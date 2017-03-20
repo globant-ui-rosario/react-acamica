@@ -1,6 +1,12 @@
-class TaskItem extends React.Component {
+class TaskItem1 extends React.Component {
     render () {
-        return <li>{this.props.name}</li>;
+        return <li>Do homework</li>;
+    }
+}
+
+class TaskItem2 extends React.Component {
+    render () {
+        return <li>Work</li>;
     }
 }
 
@@ -8,8 +14,8 @@ class TasksList extends React.Component {
     render () {
         return (
             <ul>
-                <TaskItem name="Do homework" />
-                <TaskItem name="Work" />
+                <TaskItem1 />
+                <TaskItem2 />
             </ul>
         );
     }
