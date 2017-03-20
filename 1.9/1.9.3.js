@@ -23,8 +23,8 @@ export default class Component extends React.Component {
     render () {
         return (
             <div className="component">
-            <p>This block height is equal to {this.state.height}px</p>
-        </div>
+                <p>This block height is equal to {this.state.height}px</p>
+            </div>
         );
     }
 }
