@@ -1,0 +1,16 @@
+.persona {
+    height: 172px;
+    width: 75px;
+}
+
+.persona--alta {
+    height: 190px;
+}
+
+.persona__brazo {
+    height: 30px;
+}
+
+.persona__brazo--largo {
+    height: 42px;
+}
