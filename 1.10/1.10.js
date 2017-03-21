@@ -7,7 +7,7 @@ export default class Component extends React.Component {
         super();
 
         this.state = {
-            selected: false
+            codeBlock: false
         };
     }
 
