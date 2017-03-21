@@ -23,7 +23,7 @@ export default class Component extends React.Component {
         return classNames({
             block: true,
             'text-block': (this.props.textBlock),
-            'text-block--highlighted': (this.state.selected)
+            'code-block': (this.state.codeBlock)
         });
     }
 }
