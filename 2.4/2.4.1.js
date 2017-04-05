@@ -1,0 +1,26 @@
+class TaskList extends React.Component {
+
+    constructor (props) {
+        super(props);
+    }
+
+    render () {
+        let taskItems = getTaskItems();
+
+        return (
+            <ul className="task-list">
+                {taskItems}
+            </ul>
+        )
+    }
+
+    getTaskItems () {
+        return this.props.tasks.map((task) => {
+            return (
+                <TaskItem task={task} />
+            );
+        })
+    }
+}
+
+export default TaskList;
