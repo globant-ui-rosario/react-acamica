@@ -24,17 +24,14 @@ describe('Input component', () => {
             });
         });
 
-        it('should set the provided defaultValue as value', () => {
-            expect(getAttribute(input, 'value')).toEqual('DEFAULT_VALUE__MOCK');
+        it('should set the expected state', () => {
+            expect(input.state).toEqual({
+                    value: 'DEFAULT_VALUE__MOCK'
+            });
         });
 
-        it('should set the provided value as value even if defaultValue is provided', () => {
-            renderComponent({
-                defaultValue: 'DEFAULT_VALUE__MOCK',
-                value: 'VALUE__MOCK'
-            });
-
-            expect(getAttribute(input, 'value')).toEqual('VALUE__MOCK');
+        it('should set the provided defaultValue as value', () => {
+            expect(getAttribute(input, 'value')).toEqual('DEFAULT_VALUE__MOCK');
         });
 
         it('should update state when input value changes', () => {
@@ -45,6 +42,26 @@ describe('Input component', () => {
             });
 
             expect(input.state.value).toEqual('VALUE__MOCK');
+        });
+    });
+
+    describe('when rendered with value', () => {
+
+        beforeEach(() => {
+            renderComponent({
+                defaultValue: 'DEFAULT_VALUE__MOCK',
+                value: 'VALUE__MOCK'
+            });
+        });
+
+        it('should set the expected state', () => {
+            expect(input.state).toEqual({
+                    value: 'VALUE__MOCK'
+            });
+        });
+
+        it('should set the provided value as value even if defaultValue is provided', () => {
+            expect(getAttribute(input, 'value')).toEqual('VALUE__MOCK');
         });
     });
 
