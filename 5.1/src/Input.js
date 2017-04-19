@@ -14,7 +14,7 @@ class Input extends React.Component {
 
     render () {
         return (
-            <input value={this.getValue()} onChange={this.handleInputChange} />
+            <input value={this.getValue()} className="input" onChange={this.handleInputChange} />
         );
     }
 

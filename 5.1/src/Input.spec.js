@@ -34,6 +34,10 @@ describe('Input component', () => {
             expect(getAttribute(input, 'value')).toEqual('DEFAULT_VALUE__MOCK');
         });
 
+        it('should set input className', () => {
+            expect(getAttribute(input, 'class')).toEqual('input');
+        });
+
         it('should update state when input value changes', () => {
             Simulate.change(inputNode, {
                 target: {
