@@ -25,7 +25,7 @@ export default connect(
     state => ({
         todos: state.todos
     }),
-    {
-        agregarTodo: todosActions.agregarTodo
-    }
+    (dispatch) => ({
+        agregarTodo: text => dispatch(todosActions.agregarTodo(text))
+    })
 )(TodosList);

@@ -2,11 +2,11 @@ class TodosList extends React.Component {
     render () {
         return (
             <ul>
-                {this.props.todos(todo =>
+                {this.props.todos.map(todo => (
                     <li>
                         {todo.text}
                     </li>
-                )}
+                ))}
             </ul>
         );
     }
