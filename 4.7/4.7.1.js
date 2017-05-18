@@ -1,13 +1,7 @@
 class TodosList extends React.Component {
     render () {
         return (
-            <ul>
-                {this.props.todos.map(todo => (
-                    <li>
-                        {todo.text}
-                    </li>
-                ))}
-            </ul>
+            <TodoListItems items={this.props.todos} />
         );
     }
 }

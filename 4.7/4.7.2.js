@@ -7,16 +7,12 @@ class TodosList extends React.Component {
 
     render () {
         return (
-            <ul>
-                {this.props.todos(todo =>
-                    <li>
-                        {todo.text}
-                    </li>
-                )}
-            </ul>
-            <button type="button" onClick={this.onClickButton}>
-                Agregar tarea
-            </button>
+            <div>
+                <TodoListItems items={this.props.todos} />
+                <button type="button" onClick={this.onClickButton}>
+                    Agregar tarea
+                </button>
+            </div>
         );
     }
 }
