@@ -4,27 +4,12 @@ class Input extends React.Component {
         super(props);
 
         this.handleInputChange = this.handleInputChange.bind(this);
-
-        this.state = {
-            value: props.value || props.defaultValue
-        };
     }
 
     render () {
         return (
-            <input value={this.getValue()} onChange={this.handleInputChange} />
+            <input value={this.props.value} onChange={this.handleInputChange} />
         );
-    }
-
-    getValue () {
-        const props = this.props;
-        let value = this.state.value;
-
-        if (props.value !==  undefined) {
-            value = props.value;
-        }
-
-        return value;
     }
 
     handleInputChange (event) {
@@ -32,16 +17,11 @@ class Input extends React.Component {
 
         if (onChange) {
             onChange(event);
-        } else {
-            this.setState({
-                value: event.target.value
-            });
         }
     }
 }
 
 Input.propTypes = {
-    defaultValue: React.PropTypes.string,
     onChange: React.PropTypes.func,
     value: React.PropTypes.string
 };
