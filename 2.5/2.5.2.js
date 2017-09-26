@@ -5,7 +5,7 @@ class AutoFocusTextInput extends React.Component {
     }
 
     componentDidMount () {
-        this.textInput.focus();
+        this.refs.textInput.focus();
     }
 
     render () {

@@ -7,7 +7,7 @@ class CustomTextInput extends React.Component {
     }
 
     focus () {
-        let input = this.refs.myInput;
+        let input = this.refs.textInput;
 
         input.focus();
     }
@@ -15,9 +15,9 @@ class CustomTextInput extends React.Component {
     render () {
         return (
             <div>
-                <input
+                <Input
                     type="text"
-                    ref="myInput"
+                    ref={(input) => { this.textInput = input; }}
                 />
                 <input
                     type="button"

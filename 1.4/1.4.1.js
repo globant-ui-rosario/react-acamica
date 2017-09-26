@@ -1,3 +1,5 @@
+import React from 'react';
+
 class MyOtherComponent extends React.Component {
     render () {
         const otherInputType = 'time';

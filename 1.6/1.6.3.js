@@ -1,3 +1,5 @@
+import React from 'react';
+
 class TaskItem extends React.Component {
     render () {
         return <li>{this.props.name}</li>;
@@ -6,7 +8,7 @@ class TaskItem extends React.Component {
 
 TaskItem.propTypes = {
     name: React.PropTypes.string.isRequired
-}
+};
 
 class TasksList extends React.Component {
     render () {

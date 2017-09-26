@@ -7,9 +7,11 @@ import ProductOrders from './product-orders';
 export default (
     <Router>
         <Route path="/">
-            <Route path="product/settings" component={ProductSettings} />
-            <Route path="product/inventory" component={ProductInventory} />
-            <Route path="product/orders" component={ProductOrders} />
+            <Route path="product">
+                <Route path="settings" component={ProductSettings} />
+                <Route path="inventory" component={ProductInventory} />
+                <Route path="orders" component={ProductOrders} />
+            </Route>
         </Route>
     </Router>
 );

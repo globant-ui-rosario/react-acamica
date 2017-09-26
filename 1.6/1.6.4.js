@@ -1,3 +1,5 @@
+import React from 'react';
+
 TaskItem.propTypes = {
   optionalArray: React.PropTypes.array,
   optionalBool: React.PropTypes.bool,

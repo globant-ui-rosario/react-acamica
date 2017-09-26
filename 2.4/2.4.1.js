@@ -5,7 +5,7 @@ class TaskList extends React.Component {
     }
 
     render () {
-        let taskItems = getTaskItems();
+        let taskItems = this.getTaskItems();
 
         return (
             <ul className="task-list">
@@ -16,10 +16,8 @@ class TaskList extends React.Component {
 
     getTaskItems () {
         return this.props.tasks.map((task) => {
-            return (
-                <TaskItem task={task} />
-            );
-        })
+            return (<TaskItem task={task} />);
+        });
     }
 }
 

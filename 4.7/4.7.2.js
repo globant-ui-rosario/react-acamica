@@ -1,8 +1,10 @@
 const todosActions = require('actions/todos');
+const dispatch = store.dispatch;
 
 class TodosList extends React.Component {
+
     onClickButton () {
-        this.props.agregarTodo("Nueva Tarea");
+        this.props.agregarTodo('Nueva Tarea');
     }
 
     render () {
@@ -17,11 +19,22 @@ class TodosList extends React.Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        todos: state.todos,
+        visibilityFilter: state.visibilityFilter
+    };
+};
+
+const mapDispatchToProps = function () {
+    return {
+        agregarTodo: (text) => {
+            dispatch(todosActions.agregarTodo(text))
+        }
+    };
+};
+
 export default connect(
-    state => ({
-        todos: state.todos
-    }),
-    (dispatch) => ({
-        agregarTodo: text => dispatch(todosActions.agregarTodo(text))
-    })
+    mapStateToProps,
+    mapDispatchToProps
 )(TodosList);

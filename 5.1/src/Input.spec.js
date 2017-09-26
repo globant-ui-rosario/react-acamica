@@ -13,7 +13,7 @@ describe('Input component', () => {
     }
 
     function getAttribute (component, attribute) {
-        return ReactDOM.findDOMNode(component).getAttribute(attribute)
+        return ReactDOM.findDOMNode(component).getAttribute(attribute);
     }
 
     describe('when rendered with default props', () => {
@@ -26,7 +26,7 @@ describe('Input component', () => {
 
         it('should set the expected state', () => {
             expect(input.state).toEqual({
-                    value: 'DEFAULT_VALUE__MOCK'
+                value: 'DEFAULT_VALUE__MOCK'
             });
         });
 
@@ -60,7 +60,7 @@ describe('Input component', () => {
 
         it('should set the expected state', () => {
             expect(input.state).toEqual({
-                    value: 'VALUE__MOCK'
+                value: 'VALUE__MOCK'
             });
         });
 

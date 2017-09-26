@@ -10,7 +10,7 @@ class FilterableTaskList extends React.Component {
                 'Do homework',
                 'Work'
             ],
-            filterText: ''
+            filter: ''
         };
     }
 
@@ -19,7 +19,7 @@ class FilterableTaskList extends React.Component {
 
         return (
             <div>
-                <Input value={state.filterText} onChange={this.handleFilterInputChange} />
+                <Input value={state.filter} onChange={this.handleFilterInputChange} />
                 <TaskList tasks={this.getFilteredTasks()} />
             </div>
         )
@@ -27,16 +27,16 @@ class FilterableTaskList extends React.Component {
 
     handleFilterInputChange (event) {
         this.setState({
-            filterText: event.target.value
+            filter: event.target.value
         });
     }
 
     getFilteredTasks () {
         const state = this.state;
-        const filterText = state.filterText;
+        const filter = state.filter;
 
         return state.tasks.filter((task) => {
-            return (task.indexOf(filterText) !== -1);
+            return (task.indexOf(filter) !== -1);
         });
     }
 }

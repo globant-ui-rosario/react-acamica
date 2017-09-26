@@ -1,3 +1,5 @@
+import React from 'react';
+
 class TaskItem1 extends React.Component {
     render () {
         return <li>Do homework</li>;
